@@ -285,8 +285,11 @@
 
         .project-image {
             width: 100%;
-            height: 250px;
-            object-fit: cover;
+            height: 280px; /* Slightly taller to give the helmets room */
+            object-fit: contain; /* Shows the full image without cropping */
+            background-color: #f8fafc; /* Clean, light neutral background for the image frame */
+            padding: 1rem; /* Adds a clean breathing room border around the pictures */
+            border-bottom: 1px solid var(--border-color);
         }
 
         .project-content {
