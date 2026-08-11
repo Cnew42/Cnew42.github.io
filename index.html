@@ -87,7 +87,7 @@
 
         .card-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 2rem; }
         .card { background: var(--card-bg); border-radius: 8px; border: 1px solid var(--border-color); padding: 1.5rem; box-shadow: 0 4px 6px -1px rgba(0,0,0,0.05); }
-        .card img { width: 100%; height: 200px; object-fit: cover; border-radius: 6px; margin-bottom: 1rem; }
+        .card img { width: 100%; height: 260px; object-fit: contain; background-color: #f1f5f9; border-radius: 6px; margin-bottom: 1rem; padding: 0.25rem; }
 
         .timeline-item { background: var(--card-bg); border-radius: 8px; border: 1px solid var(--border-color); padding: 1.5rem; margin-bottom: 1.5rem; box-shadow: 0 4px 6px -1px rgba(0,0,0,0.05); }
         .timeline-header { display: flex; justify-content: space-between; align-items: flex-start; margin-bottom: 1rem; flex-wrap: wrap; }
@@ -106,7 +106,7 @@
         .contact-form { display: flex; flex-direction: column; gap: 1rem; max-width: 600px; margin: 0 auto; }
         .contact-form input, .contact-form textarea { width: 100%; padding: 0.75rem; border: 1px solid var(--border-color); border-radius: 4px; }
 
-        .sticky-mobile-cta { position: fixed; bottom: 0; left: 0; width: 100%; background: #0f172a; padding: 0.75rem; display: flex; justify-content: space-around; align-items: center; z-index: 1000; }
+        .sticky-mobile-cta { position: fixed; bottom: 0; left: 0; width: 100%; background: #0f172a; padding: 0.75rem; display: flex; justify-around; align-items: center; z-index: 1000; }
         .sticky-mobile-cta a { color: white; text-decoration: none; font-size: 0.9rem; font-weight: 600; }
 
         footer { text-align: center; padding: 2rem; background-color: #0f172a; color: #94a3b8; font-size: 0.9rem; }
@@ -166,7 +166,7 @@
     <section id="about">
         <h2 class="section-title">About Me</h2>
         <div class="card">
-            <p>I am a senior student pursuing a B.S. in Applied Engineering and General Technology Management at Millersville University[cite: 1]. My technical focus combines operational continuous improvement—such as 5S walks, time and motion studies, and quality control[cite: 1]—with hands-on mechatronics assembly, digital prototyping, and custom 3D design fabrication.</p>
+            <p>I am a senior student pursuing a B.S. in Applied Engineering and General Technology Management at Millersville University. My technical focus combines operational continuous improvement—such as 5S walks, time and motion studies, and quality control—with hands-on mechatronics assembly, digital prototyping, and custom 3D design fabrication.</p>
         </div>
     </section>
 
@@ -175,7 +175,7 @@
         <h2 class="section-title">Featured Case Study</h2>
         <div class="card">
             <h3>AboveAir Assembly Bottleneck & Time Study Analysis</h3>
-            <p style="margin: 0.5rem 0 1rem 0; color: #475569;">Conducted formal time and motion studies on manufacturing lines to reduce assembly lead times by 9%, implement Kaizen workstations ($11,300 annual savings), and cut defect rates by 25%[cite: 1].</p>
+            <p style="margin: 0.5rem 0 1rem 0; color: #475569;">Conducted formal time and motion studies on manufacturing lines to reduce assembly lead times by 9%, implement Kaizen workstations ($11,300 annual savings), and cut defect rates by 25%.</p>
             <a href="case-study.html" class="btn btn-primary">Read Full Time Study Case Study</a>
             <a href="Connor N Internship Paper.pdf" target="_blank" class="btn btn-secondary" style="margin-left: 0.5rem;">📄 Internship Technical Report (PDF)</a>
         </div>
@@ -216,11 +216,11 @@
                 <span class="timeline-date">May 2026 – Present</span>
             </div>
             <ul>
-                <li><strong>Project Leadership:</strong> Assumed direct accountability for technical projects, leading teams from scope through execution using KPI frameworks[cite: 1].</li>
-                <li><strong>Time & Motion Studies:</strong> Conducted time and motion studies to improve workflow, reducing assembly lead times by 9% and eliminating bottlenecks[cite: 1].</li>
-                <li><strong>Continuous Improvement:</strong> Implemented 5S walks and Kaizen methodologies, fabricating customized workstations that saved $11,300 annually[cite: 1].</li>
-                <li><strong>Quality Assurance:</strong> Deployed standardized inspection checklists across 3 production lines, reducing manufacturing defect rates by 25%[cite: 1].</li>
-                <li><strong>Production Control:</strong> Coordinated production planning and inventory control across 3 active lines, improving production throughput by 15%[cite: 1].</li>
+                <li><strong>Project Leadership:</strong> Assumed direct accountability for technical projects, leading teams from scope through execution using KPI frameworks.</li>
+                <li><strong>Time & Motion Studies:</strong> Conducted time and motion studies to improve workflow, reducing assembly lead times by 9% and eliminating bottlenecks.</li>
+                <li><strong>Continuous Improvement:</strong> Implemented 5S walks and Kaizen methodologies, fabricating customized workstations that saved $11,300 annually.</li>
+                <li><strong>Quality Assurance:</strong> Deployed standardized inspection checklists across 3 production lines, reducing manufacturing defect rates by 25%.</li>
+                <li><strong>Production Control:</strong> Coordinated production planning and inventory control across 3 active lines, improving production throughput by 15%.</li>
             </ul>
             <a href="Connor N Internship Paper.pdf" target="_blank" class="btn btn-secondary" style="margin-top: 1rem; font-size: 0.85rem; padding: 0.4rem 0.8rem;">
                 📄 View Internship Technical Report (PDF)
@@ -236,9 +236,9 @@
                 <span class="timeline-date">Nov 2023 – Sep 2024</span>
             </div>
             <ul>
-                <li>Assembled mechanical and electromechanical components according to blueprints, exceeding daily production quotas by 10% with zero-defect standards[cite: 1].</li>
-                <li>Collaborated with engineers and production managers to troubleshoot complex issues, improving overall assembly efficiency by 10%[cite: 1].</li>
-                <li>OSHA Certified in safety and hazard control[cite: 1].</li>
+                <li>Assembled mechanical and electromechanical components according to blueprints, exceeding daily production quotas by 10% with zero-defect standards.</li>
+                <li>Collaborated with engineers and production managers to troubleshoot complex issues, improving overall assembly efficiency by 10%.</li>
+                <li>OSHA Certified in safety and hazard control.</li>
             </ul>
         </div>
 
@@ -251,8 +251,8 @@
                 <span class="timeline-date">Mar 2023 – Present</span>
             </div>
             <ul>
-                <li>Managed sections of 15–33 tables and upsold premium offerings, increasing nightly beverage revenue by 20%[cite: 1].</li>
-                <li>R.A.M.P. Certified in responsible alcohol service[cite: 1].</li>
+                <li>Managed sections of 15–33 tables and upsold premium offerings, increasing nightly beverage revenue by 20%.</li>
+                <li>R.A.M.P. Certified in responsible alcohol service.</li>
             </ul>
         </div>
     </section>
@@ -265,16 +265,16 @@
                 <h3>Millersville University Lacrosse Team Captain</h3>
                 <p style="color: #64748b; font-size: 0.85rem; margin-bottom: 0.5rem;">Aug 2022 – May 2026</p>
                 <ul>
-                    <li>Competed as collegiate athlete and varsity captain[cite: 1].</li>
-                    <li>Managed NCLL collegiate lacrosse social media accounts, driving a 91.1% follower increase[cite: 1].</li>
+                    <li>Competed as collegiate athlete and varsity captain.</li>
+                    <li>Managed NCLL collegiate lacrosse social media accounts, driving a 91.1% follower increase.</li>
                 </ul>
             </div>
             <div class="card">
                 <h3>Volunteer Youth & High School Coaching</h3>
                 <p style="color: #64748b; font-size: 0.85rem; margin-bottom: 0.5rem;">Spring Grove & Millersville, PA</p>
                 <ul>
-                    <li>Volunteer assistant coach for youth/high school basketball and lacrosse for 7+ years[cite: 1].</li>
-                    <li>Served as collegiate lacrosse assistant coach for 2+ years[cite: 1].</li>
+                    <li>Volunteer assistant coach for youth/high school basketball and lacrosse for 7+ years.</li>
+                    <li>Served as collegiate lacrosse assistant coach for 2+ years.</li>
                 </ul>
             </div>
         </div>
@@ -287,34 +287,34 @@
             <div class="skill-category">
                 <h3>Automation & Programming</h3>
                 <ul>
-                    <li>EcoStruxure Machine Expert[cite: 1]</li>
-                    <li>Ladder Logic[cite: 1]</li>
-                    <li>CyberPatriot Cybersecurity (3+ yrs)[cite: 1]</li>
+                    <li>EcoStruxure Machine Expert</li>
+                    <li>Ladder Logic</li>
+                    <li>CyberPatriot Cybersecurity (3+ yrs)</li>
                 </ul>
             </div>
             <div class="skill-category">
                 <h3>CAD / CAM & 3D Printing</h3>
                 <ul>
-                    <li>SolidWorks[cite: 1]</li>
-                    <li>Fusion 360[cite: 1]</li>
-                    <li>TinkerCAD & Creality[cite: 1]</li>
+                    <li>SolidWorks</li>
+                    <li>Fusion 360</li>
+                    <li>TinkerCAD & Creality</li>
                     <li>Custom Additive Finishing</li>
                 </ul>
             </div>
             <div class="skill-category">
                 <h3>Operations & Quality</h3>
                 <ul>
-                    <li>Time & Motion Studies[cite: 1]</li>
-                    <li>5S & Kaizen Methodologies[cite: 1]</li>
-                    <li>KPI Tracking & Quality Control[cite: 1]</li>
+                    <li>Time & Motion Studies</li>
+                    <li>5S & Kaizen Methodologies</li>
+                    <li>KPI Tracking & Quality Control</li>
                 </ul>
             </div>
             <div class="skill-category">
                 <h3>Productivity Suite</h3>
                 <ul>
-                    <li>Microsoft Suite[cite: 1]</li>
-                    <li>Adobe Creative Cloud[cite: 1]</li>
-                    <li>Google Workspace[cite: 1]</li>
+                    <li>Microsoft Suite</li>
+                    <li>Adobe Creative Cloud</li>
+                    <li>Google Workspace</li>
                 </ul>
             </div>
         </div>
@@ -342,18 +342,18 @@
         <h2 class="section-title">Frequently Asked Questions</h2>
         <div class="faq-item">
             <h3>What are your primary technical competencies?</h3>
-            <p>Industrial time/motion studies, 5S methodologies, Kaizen continuous improvement, mechatronics assembly, and 3D print prototyping[cite: 1].</p>
+            <p>Industrial time/motion studies, 5S methodologies, Kaizen continuous improvement, mechatronics assembly, and 3D print prototyping.</p>
         </div>
         <div class="faq-item">
             <h3>When are you available for full-time post-graduation roles?</h3>
-            <p>Available for full-time engineering and operations positions following graduation from Millersville University in 2026[cite: 1].</p>
+            <p>Available for full-time engineering and operations positions following graduation from Millersville University in 2026.</p>
         </div>
     </section>
 
     <!-- Maps & Directions Section -->
     <section id="location">
         <h2 class="section-title">Regional Location</h2>
-        <p style="margin-bottom: 1rem;">Based in the Lancaster/Millersville, PA region with flexibility for regional and national industrial operations placement[cite: 1].</p>
+        <p style="margin-bottom: 1rem;">Based in the Lancaster/Millersville, PA region with flexibility for regional and national industrial operations placement.</p>
         <div style="width: 100%; height: 300px; border-radius: 8px; overflow: hidden; border: 1px solid var(--border-color);">
             <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d48868.52834529323!2d-76.3811562!3d39.9989874!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x89c62372d82944b5%3A0xa646279f0412e698!2sMillersville%2C%20PA!5e0!2m3!1sen!2sus!4v1700000000000" width="100%" height="100%" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
         </div>
@@ -364,7 +364,7 @@
         <h2 class="section-title">Get In Touch</h2>
         <p style="text-align: center; margin-bottom: 1.5rem; color: #475569;">
             📧 Direct Email: <a href="mailto:Cpnew103@gmail.com" style="color: var(--primary-color);">Cpnew103@gmail.com</a> | 
-            🔗 LinkedIn: <a href="https://www.linkedin.com/in/connor-new42" target="_blank" style="color: var(--primary-color);">linkedin.com/in/connor-new42</a>[cite: 1]
+            🔗 LinkedIn: <a href="https://www.linkedin.com/in/connor-new42" target="_blank" style="color: var(--primary-color);">linkedin.com/in/connor-new42</a>
         </p>
         <form class="contact-form" action="thank-you.html" method="GET">
             <input type="text" name="name" placeholder="Your Name" required>
