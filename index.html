@@ -252,6 +252,47 @@
             color: var(--text-muted);
         }
 
+        /* SKILLS SECTION */
+        .skills-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+            gap: 1.5rem;
+        }
+
+        .skill-category-card {
+            background-color: var(--bg-white);
+            border: 1px solid var(--border);
+            border-radius: var(--radius);
+            padding: 1.5rem;
+            box-shadow: var(--shadow);
+        }
+
+        .skill-category-card h3 {
+            font-size: 1.1rem;
+            color: var(--primary);
+            margin-bottom: 0.75rem;
+        }
+
+        .skill-list {
+            list-style: none;
+        }
+
+        .skill-list li {
+            font-size: 0.95rem;
+            color: var(--text-muted);
+            padding: 0.25rem 0;
+            position: relative;
+            padding-left: 1.2rem;
+        }
+
+        .skill-list li::before {
+            content: "•";
+            color: var(--primary);
+            position: absolute;
+            left: 0;
+            font-weight: bold;
+        }
+
         /* PROJECTS SECTION */
         .projects-grid {
             display: grid;
@@ -505,6 +546,7 @@
 
             <ul class="nav-menu" id="navMenu">
                 <li><a href="#about" class="nav-link">About</a></li>
+                <li><a href="#skills" class="nav-link">Skills</a></li>
                 <li><a href="#projects" class="nav-link">Projects</a></li>
                 <li><a href="#experience" class="nav-link">Experience</a></li>
                 <li><a href="#contact" class="nav-link">Contact</a></li>
@@ -547,16 +589,66 @@
                         <p>Concentration: General Technology</p>
                     </div>
                     <div class="highlight-card">
-                        <h3>Core Skills</h3>
-                        <p>3D Printing & Slicing • Quality Management • Compliance Documentation • Project Outreach • Technical CAD Analysis</p>
+                        <h3>Leadership & Outreach</h3>
+                        <p>Directed business funding outreach for club lacrosse uniform sponsorship and tournament travel logistics.</p>
                     </div>
                 </div>
             </div>
         </div>
     </section>
 
+    <!-- TECHNICAL SKILLS SECTION -->
+    <section id="skills" class="section bg-light">
+        <div class="container">
+            <h2 class="section-title">Technical Skills & Expertise</h2>
+            <div class="skills-grid">
+                
+                <div class="skill-category-card">
+                    <h3>Additive Manufacturing</h3>
+                    <ul class="skill-list">
+                        <li>3D Printing (FDM / PLA+)</li>
+                        <li>Slicer Parameter Optimization</li>
+                        <li>Layer Adhesion & Speed Control</li>
+                        <li>Post-Processing & Finishing</li>
+                    </ul>
+                </div>
+
+                <div class="skill-category-card">
+                    <h3>Engineering & Quality</h3>
+                    <ul class="skill-list">
+                        <li>Industrial Quality Management</li>
+                        <li>Process Control & Optimization</li>
+                        <li>Compliance Reporting & Audit</li>
+                        <li>Technical CAD Analysis</li>
+                    </ul>
+                </div>
+
+                <div class="skill-category-card">
+                    <h3>Electro-Mechanics</h3>
+                    <ul class="skill-list">
+                        <li>Micro-Servo Integration</li>
+                        <li>Mechanical Linkage Prototyping</li>
+                        <li>Assembly Workflow Design</li>
+                        <li>Component Durability Testing</li>
+                    </ul>
+                </div>
+
+                <div class="skill-category-card">
+                    <h3>Management & Operations</h3>
+                    <ul class="skill-list">
+                        <li>Corporate Funding Outreach</li>
+                        <li>Project Compliance Operations</li>
+                        <li>Sponsorship Logistics</li>
+                        <li>Technical Documentation</li>
+                    </ul>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
     <!-- PROJECTS SECTION -->
-    <section id="projects" class="section bg-light">
+    <section id="projects" class="section">
         <div class="container">
             <h2 class="section-title">Featured Projects</h2>
             <div class="projects-grid">
@@ -612,7 +704,7 @@
     </section>
 
     <!-- EXPERIENCE SECTION -->
-    <section id="experience" class="section">
+    <section id="experience" class="section bg-light">
         <div class="container">
             <h2 class="section-title">Professional Experience</h2>
             <div class="timeline">
@@ -640,7 +732,7 @@
     </section>
 
     <!-- CONTACT SECTION -->
-    <section id="contact" class="section bg-light">
+    <section id="contact" class="section">
         <div class="container">
             <h2 class="section-title">Get In Touch</h2>
             <p class="contact-subtitle">Whether you have an engineering opportunity, project inquiry, or professional network connection, feel free to reach out directly.</p>
