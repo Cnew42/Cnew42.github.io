@@ -100,12 +100,6 @@
             border-color: var(--text-muted);
         }
 
-        .btn-large {
-            font-size: 1.1rem;
-            padding: 0.85rem 1.75rem;
-            margin: 1.25rem 0;
-        }
-
         /* NAVBAR */
         .navbar {
             position: fixed;
@@ -412,7 +406,7 @@
             font-size: 0.95rem;
         }
 
-        /* CONTACT SECTION */
+        /* CONTACT SECTION WITH FORM */
         .contact-subtitle {
             text-align: center;
             max-width: 600px;
@@ -420,26 +414,59 @@
             color: var(--text-muted);
         }
 
-        .contact-direct-card {
-            background: var(--bg-white);
-            border: 1px solid var(--border);
-            border-radius: 12px;
-            padding: 3rem 2rem;
-            max-width: 550px;
+        .contact-container {
+            max-width: 600px;
             margin: 0 auto;
-            text-align: center;
+            background: var(--bg-white);
+            padding: 2.5rem;
+            border-radius: var(--radius);
             box-shadow: var(--shadow);
+            border: 1px solid var(--border);
         }
 
-        .contact-icon {
-            font-size: 2.5rem;
-            margin-bottom: 1rem;
+        .contact-direct {
+            text-align: center;
+            margin-bottom: 2rem;
+            padding-bottom: 1.5rem;
+            border-bottom: 1px solid var(--border);
         }
 
-        .social-links-contact {
-            margin-top: 1.5rem;
-            padding-top: 1.5rem;
-            border-top: 1px solid var(--border);
+        .contact-direct a {
+            color: var(--primary);
+            text-decoration: none;
+            font-weight: 600;
+        }
+
+        .contact-form .form-group {
+            margin-bottom: 1.25rem;
+        }
+
+        .contact-form label {
+            display: block;
+            margin-bottom: 0.5rem;
+            font-weight: 600;
+            font-size: 0.9rem;
+        }
+
+        .contact-form input,
+        .contact-form textarea {
+            width: 100%;
+            padding: 0.75rem;
+            border: 1px solid var(--border);
+            border-radius: var(--radius);
+            font-family: inherit;
+            font-size: 0.95rem;
+        }
+
+        .contact-form input:focus,
+        .contact-form textarea:focus {
+            outline: none;
+            border-color: var(--primary);
+            box-shadow: 0 0 0 3px rgba(37, 99, 235, 0.1);
+        }
+
+        .contact-form button {
+            width: 100%;
         }
 
         /* FOOTER */
@@ -731,23 +758,39 @@
         </div>
     </section>
 
-    <!-- CONTACT SECTION -->
+    <!-- CONTACT SECTION WITH FORM -->
     <section id="contact" class="section">
         <div class="container">
             <h2 class="section-title">Get In Touch</h2>
-            <p class="contact-subtitle">Whether you have an engineering opportunity, project inquiry, or professional network connection, feel free to reach out directly.</p>
+            <p class="contact-subtitle">Have a project idea, engineering opportunity, or question? Send me a message below or connect directly.</p>
             
-            <div class="contact-direct-card">
-                <div class="contact-icon">📧</div>
-                <h3>Email Me Directly</h3>
-                <p>Click below to launch your default email program or copy the address:</p>
-                <a href="mailto:Cpnew103@gmail.com" class="btn btn-primary btn-large">Cpnew103@gmail.com</a>
-                
-                <div class="social-links-contact">
-                    <a href="https://linkedin.com/in/connor-new42" target="_blank" rel="noopener noreferrer" class="btn btn-outline">
-                        Connect on LinkedIn
-                    </a>
+            <div class="contact-container">
+                <div class="contact-direct">
+                    <p>Direct Email: <a href="mailto:Cpnew103@gmail.com">Cpnew103@gmail.com</a></p>
+                    <p>LinkedIn: <a href="https://linkedin.com/in/connor-new42" target="_blank" rel="noopener noreferrer">linkedin.com/in/connor-new42</a></p>
                 </div>
+
+                <form class="contact-form" action="https://formsubmit.co/Cpnew103@gmail.com" method="POST">
+                    <input type="hidden" name="_next" value="https://cnew42.github.io/thank-you.html">
+                    <input type="hidden" name="_subject" value="New Portfolio Contact Form Submission">
+                    
+                    <div class="form-group">
+                        <label for="name">Your Name</label>
+                        <input type="text" id="name" name="name" placeholder="John Doe" required>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="email">Your Email</label>
+                        <input type="email" id="email" name="email" placeholder="john@example.com" required>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="message">Message</label>
+                        <textarea id="message" name="message" rows="5" placeholder="Write your message here..." required></textarea>
+                    </div>
+                    
+                    <button type="submit" class="btn btn-primary">Send Message</button>
+                </form>
             </div>
         </div>
     </section>
