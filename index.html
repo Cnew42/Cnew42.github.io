@@ -3,570 +3,225 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Connor New | Engineering & Technology Portfolio</title>
+    <!-- Unique Page Title -->
+    <title>Connor New | Engineering & Technology Management Portfolio</title>
+    
+    <!-- Meta Description -->
+    <meta name="description" content="Portfolio of Connor New, Engineering & Technology Management senior at Millersville University. Specializing in lean manufacturing, time studies, and mechatronics.">
+    
+    <!-- Open Graph / Social Sharing Meta Tags -->
+    <meta property="og:title" content="Connor New | Engineering & Technology Management Portfolio">
+    <meta property="og:description" content="Engineering senior specializing in industrial operations, continuous improvement, and 3D printing integration. View technical reports and case studies.">
+    <meta property="og:image" content="https://cnew42.github.io/headshot.jpg">
+    <meta property="og:url" content="https://cnew42.github.io/">
+    <meta property="og:type" content="website">
+
+    <!-- Google Analytics (GA4) Tag Template -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-YOURTAGHERE"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', 'G-YOURTAGHERE');
+    </script>
+
+    <!-- Local Schema (JSON-LD) -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Person",
+      "name": "Connor New",
+      "jobTitle": "Engineering Intern & Senior Student",
+      "alumniOf": "Millersville University",
+      "knowsAbout": ["Lean Manufacturing", "Kaizen", "Time Studies", "3D Printing", "PLC Programming"],
+      "url": "https://cnew42.github.io/",
+      "address": {
+        "@type": "PostalAddress",
+        "addressLocality": "Millersville",
+        "addressRegion": "PA",
+        "addressCountry": "US"
+      }
+    }
+    </script>
+
     <style>
-        /* Modern Reset and CSS Variables */
         :root {
             --bg-color: #f8fafc;
             --text-color: #0f172a;
-            --primary-color: #0284c7; /* Engineering Blue */
+            --primary-color: #0284c7;
             --primary-hover: #0369a1;
             --accent-color: #334155;
             --card-bg: #ffffff;
             --border-color: #e2e8f0;
         }
 
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-            scroll-behavior: smooth;
-        }
+        * { margin: 0; padding: 0; box-sizing: border-box; font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; scroll-behavior: smooth; }
+        body { background-color: var(--bg-color); color: var(--text-color); line-height: 1.6; padding-bottom: 60px; }
 
-        body {
-            background-color: var(--bg-color);
-            color: var(--text-color);
-            line-height: 1.6;
-        }
+        nav { position: fixed; top: 0; width: 100%; background-color: rgba(255, 255, 255, 0.95); backdrop-filter: blur(5px); border-bottom: 1px solid var(--border-color); z-index: 1000; display: flex; justify-content: space-between; align-items: center; padding: 1rem 5%; }
+        .logo { font-size: 1.25rem; font-weight: 700; color: var(--text-color); text-decoration: none; }
+        .nav-links { display: flex; list-style: none; gap: 1.5rem; }
+        .nav-links a { text-decoration: none; color: var(--accent-color); font-weight: 500; transition: color 0.3s; }
+        .nav-links a:hover { color: var(--primary-color); }
 
-        /* Navigation */
-        nav {
-            position: fixed;
-            top: 0;
-            width: 100%;
-            background-color: rgba(255, 255, 255, 0.95);
-            backdrop-filter: blur(5px);
-            border-bottom: 1px solid var(--border-color);
-            z-index: 1000;
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            padding: 1rem 5%;
-        }
+        .breadcrumbs { padding: 1rem 10%; background-color: #e2e8f0; font-size: 0.85rem; margin-top: 60px; }
+        .breadcrumbs a { color: var(--primary-color); text-decoration: none; }
 
-        .logo {
-            font-size: 1.25rem;
-            font-weight: 700;
-            color: var(--text-color);
-            text-decoration: none;
-        }
+        header { min-height: 85vh; display: grid; grid-template-columns: 1fr 1fr; align-items: center; padding: 2rem 10%; background: linear-gradient(135deg, #f1f5f9 0%, #e2e8f0 100%); }
+        .hero-text-container h1 { font-size: 3rem; margin-bottom: 1rem; }
+        .hero-text-container h1 span { color: var(--primary-color); }
+        .hero-text-container p { font-size: 1.1rem; margin-bottom: 1.5rem; color: #475569; }
 
-        .nav-links {
-            display: flex;
-            list-style: none;
-            gap: 2rem;
-        }
+        .hero-headshot-container img { max-width: 80%; height: auto; border-radius: 12px; box-shadow: 0 10px 15px -3px rgba(0,0,0,0.1); }
 
-        .nav-links a {
-            text-decoration: none;
-            color: var(--accent-color);
-            font-weight: 500;
-            transition: color 0.3s;
-        }
+        .cta-buttons { display: flex; gap: 1rem; margin-bottom: 1rem; }
+        .btn { display: inline-block; padding: 0.75rem 1.5rem; text-decoration: none; border-radius: 6px; font-weight: 600; transition: all 0.3s; border: none; cursor: pointer; }
+        .btn-primary { background-color: var(--primary-color); color: white; }
+        .btn-primary:hover { background-color: var(--primary-hover); }
+        .btn-secondary { border: 2px solid var(--accent-color); color: var(--accent-color); background: transparent; }
 
-        .nav-links a:hover {
-            color: var(--primary-color);
-        }
+        .promise-banner { background-color: #e0f2fe; color: #0369a1; padding: 0.5rem 1rem; border-radius: 4px; font-size: 0.85rem; font-weight: 600; display: inline-block; }
 
-        /* Hero Section */
-        header {
-            min-height: 100vh;
-            display: grid;
-            grid-template-columns: 1fr 1fr;
-            align-items: center;
-            padding: 0 10%;
-            background: linear-gradient(135deg, #f1f5f9 0%, #e2e8f0 100%);
-            padding-top: 80px;
-        }
+        section { padding: 4rem 10%; }
+        .section-title { font-size: 2rem; margin-bottom: 2rem; position: relative; display: inline-block; }
+        .section-title::after { content: ''; position: absolute; left: 0; bottom: -5px; width: 50px; height: 4px; background-color: var(--primary-color); }
 
-        .hero-text-container {
-            padding-right: 2rem;
-        }
+        .card-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 2rem; }
+        .card { background: var(--card-bg); border-radius: 8px; border: 1px solid var(--border-color); padding: 1.5rem; box-shadow: 0 4px 6px -1px rgba(0,0,0,0.05); }
 
-        .hero-text-container h1 {
-            font-size: 3.5rem;
-            margin-bottom: 1rem;
-            color: var(--text-color);
-        }
+        .faq-item { margin-bottom: 1rem; border-bottom: 1px solid var(--border-color); padding-bottom: 0.5rem; }
+        .faq-item h3 { font-size: 1.1rem; color: var(--accent-color); margin-bottom: 0.25rem; }
 
-        .hero-text-container h1 span {
-            color: var(--primary-color);
-        }
+        .contact-form { display: flex; flex-direction: column; gap: 1rem; max-width: 600px; margin: 0 auto; }
+        .contact-form input, .contact-form textarea { width: 100%; padding: 0.75rem; border: 1px solid var(--border-color); border-radius: 4px; }
 
-        .hero-text-container h2 {
-            font-size: 1.75rem;
-            font-weight: 400;
-            color: var(--accent-color);
-            margin-bottom: 1.5rem;
-        }
+        /* Sticky Mobile CTA */
+        .sticky-mobile-cta { position: fixed; bottom: 0; left: 0; width: 100%; background: #0f172a; padding: 0.75rem; display: flex; justify-content: space-around; align-items: center; z-index: 1000; }
+        .sticky-mobile-cta a { color: white; text-decoration: none; font-size: 0.9rem; font-weight: 600; }
 
-        .hero-text-container p {
-            max-width: 600px;
-            font-size: 1.1rem;
-            margin-bottom: 2rem;
-            color: #475569;
-        }
+        footer { text-align: center; padding: 2rem; background-color: #0f172a; color: #94a3b8; font-size: 0.9rem; }
+        footer a { color: #38bdf8; text-decoration: none; }
 
-        .hero-headshot-container {
-            display: flex;
-            justify-content: center;
-            align-items: center;
-        }
-
-        .hero-headshot-container img {
-            max-width: 85%;
-            height: auto;
-            border-radius: 12px;
-            box-shadow: 0 10px 15px -3px rgba(0,0,0,0.1), 0 4px 6px -2px rgba(0,0,0,0.05);
-        }
-
-        .cta-buttons {
-            display: flex;
-            gap: 1rem;
-        }
-
-        .btn {
-            display: inline-block;
-            padding: 0.75rem 1.5rem;
-            text-decoration: none;
-            border-radius: 6px;
-            font-weight: 600;
-            transition: all 0.3s;
-        }
-
-        .btn-primary {
-            background-color: var(--primary-color);
-            color: white;
-        }
-
-        .btn-primary:hover {
-            background-color: var(--primary-hover);
-        }
-
-        .btn-secondary {
-            border: 2px solid var(--accent-color);
-            color: var(--accent-color);
-        }
-
-        .btn-secondary:hover {
-            background-color: var(--accent-color);
-            color: white;
-        }
-
-        /* Section Styling */
-        section {
-            padding: 5rem 10%;
-        }
-
-        section h2.section-title {
-            font-size: 2rem;
-            margin-bottom: 3rem;
-            position: relative;
-            display: inline-block;
-        }
-
-        section h2.section-title::after {
-            content: '';
-            position: absolute;
-            left: 0;
-            bottom: -5px;
-            width: 50px;
-            height: 4px;
-            background-color: var(--primary-color);
-            border-radius: 2px;
-        }
-
-        /* About / Education */
-        .about-grid {
-            display: grid;
-            grid-template-columns: 2fr 1fr;
-            gap: 4rem;
-        }
-
-        .education-card {
-            background: var(--card-bg);
-            padding: 1.5rem;
-            border-radius: 8px;
-            border-left: 4px solid var(--primary-color);
-            box-shadow: 0 4px 6px -1px rgba(0,0,0,0.05);
-        }
-
-        /* Experience Timeline */
-        .timeline {
-            display: flex;
-            flex-direction: column;
-            gap: 2rem;
-        }
-
-        .timeline-item {
-            background: var(--card-bg);
-            padding: 2rem;
-            border-radius: 8px;
-            box-shadow: 0 4px 6px -1px rgba(0,0,0,0.05);
-            border: 1px solid var(--border-color);
-        }
-
-        .timeline-header {
-            display: flex;
-            justify-content: space-between;
-            align-items: flex-start;
-            margin-bottom: 1rem;
-            flex-wrap: wrap;
-            gap: 0.5rem;
-        }
-
-        .timeline-date {
-            background-color: #e0f2fe;
-            color: var(--primary-color);
-            padding: 0.25rem 0.75rem;
-            border-radius: 20px;
-            font-size: 0.85rem;
-            font-weight: 600;
-        }
-
-        .timeline-item ul {
-            margin-left: 1.25rem;
-            margin-top: 0.5rem;
-        }
-
-        /* Skills Grid */
-        .skills-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-            gap: 2rem;
-        }
-
-        .skill-category {
-            background: var(--card-bg);
-            padding: 1.5rem;
-            border-radius: 8px;
-            border: 1px solid var(--border-color);
-        }
-
-        .skill-category h3 {
-            margin-bottom: 1rem;
-            color: var(--primary-color);
-            border-bottom: 1px solid var(--border-color);
-            padding-bottom: 0.5rem;
-        }
-
-        .skill-tags {
-            display: flex;
-            flex-wrap: wrap;
-            gap: 0.5rem;
-        }
-
-        .tag {
-            background-color: #f1f5f9;
-            color: var(--accent-color);
-            padding: 0.35rem 0.75rem;
-            border-radius: 4px;
-            font-size: 0.9rem;
-            font-weight: 500;
-        }
-
-        /* Projects Section */
-        .projects-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-            gap: 2rem;
-        }
-
-        .project-card {
-            background: var(--card-bg);
-            border-radius: 8px;
-            border: 1px solid var(--border-color);
-            overflow: hidden;
-            box-shadow: 0 4px 6px -1px rgba(0,0,0,0.05);
-            display: flex;
-            flex-direction: column;
-        }
-
-        .project-image {
-            width: 100%;
-            height: 280px;
-            object-fit: contain;
-            background-color: #f8fafc;
-            padding: 1rem;
-            border-bottom: 1px solid var(--border-color);
-        }
-
-        .project-content {
-            padding: 1.5rem;
-            display: flex;
-            flex-direction: column;
-            flex-grow: 1;
-        }
-
-        .project-content h3 {
-            margin-bottom: 0.5rem;
-        }
-
-        .project-content p {
-            color: #475569;
-            font-size: 0.95rem;
-            flex-grow: 1;
-        }
-
-        /* Contact Section */
-        .contact-container {
-            max-width: 600px;
-            margin: 0 auto;
-            text-align: center;
-        }
-
-        .contact-links {
-            display: flex;
-            justify-content: center;
-            gap: 2rem;
-            margin-top: 2rem;
-            flex-wrap: wrap;
-            align-items: center;
-        }
-
-        .contact-links a {
-            color: var(--text-color);
-            text-decoration: none;
-            font-weight: 600;
-            display: flex;
-            align-items: center;
-            gap: 0.5rem;
-            transition: color 0.3s;
-        }
-
-        .contact-links a:hover {
-            color: var(--primary-color);
-        }
-
-        footer {
-            text-align: center;
-            padding: 2rem;
-            background-color: #0f172a;
-            color: #94a3b8;
-            font-size: 0.9rem;
-        }
-
-        /* Responsive Design */
         @media (max-width: 768px) {
-            header {
-                grid-template-columns: 1fr;
-                padding: 100px 5% 4rem 5%;
-                text-align: center;
-            }
-            .hero-text-container {
-                padding-right: 0;
-                margin-bottom: 2rem;
-            }
-            .hero-headshot-container img {
-                max-width: 70%;
-            }
-            .cta-buttons {
-                justify-content: center;
-            }
-            .about-grid {
-                grid-template-columns: 1fr;
-                gap: 2rem;
-            }
-            .nav-links {
-                display: none;
-            }
-            section {
-                padding: 4rem 5%;
-            }
+            header { grid-template-columns: 1fr; text-align: center; }
+            .cta-buttons { justify-content: center; }
+            .hero-headshot-container img { max-width: 60%; margin-top: 1.5rem; }
         }
     </style>
 </head>
 <body>
 
-    <!-- Navigation Bar -->
+    <!-- Internal Navigation Links -->
     <nav>
-        <a href="#" class="logo">Connor New</a>
+        <a href="index.html" class="logo">Connor New</a>
         <ul class="nav-links">
+            <li><a href="index.html">Home</a></li>
             <li><a href="#about">About</a></li>
             <li><a href="#experience">Experience</a></li>
-            <li><a href="#skills">Skills</a></li>
-            <li><a href="#projects">Projects</a></li>
+            <li><a href="case-study.html">Case Study</a></li>
             <li><a href="#contact">Contact</a></li>
         </ul>
     </nav>
 
-    <!-- Hero Header Section -->
+    <!-- Breadcrumbs -->
+    <div class="breadcrumbs">
+        <span>Home</span>
+    </div>
+
+    <!-- Hero Header with CTA Above the Fold -->
     <header>
         <div class="hero-text-container">
             <h1>Hi, I'm <span>Connor New</span></h1>
             <h2>Engineering & Technology Management Professional</h2>
-            <p>Bridging the gap between technical execution and tactical operations leadership. Experienced in industrial manufacturing optimization, operations tracking, and mechatronic systems integration.</p>
+            <p>Optimizing industrial throughput, time study analytics, and mechatronic systems integration.</p>
+            
+            <!-- Above-the-fold CTA -->
             <div class="cta-buttons">
-                <a href="#projects" class="btn btn-primary">View My Projects</a>
-                <a href="#contact" class="btn btn-secondary">Get In Touch</a>
+                <a href="#contact" class="btn btn-primary">Contact Me</a>
+                <a href="Connor N Internship Paper.pdf" target="_blank" class="btn btn-secondary">Download Technical Paper</a>
+            </div>
+
+            <!-- Response Time Promise -->
+            <div class="promise-banner">
+                ⚡ Response Time Promise: Inquiries answered within 24 business hours
             </div>
         </div>
+        
+        <!-- Professional Photo with Alt Text -->
         <div class="hero-headshot-container">
-            <img src="headshot.jpg" alt="Connor New Professional Headshot">
+            <img src="headshot.jpg" alt="Connor New Millersville University Engineering Headshot">
         </div>
     </header>
 
-    <!-- About & Education Section -->
-    <section id="about">
-        <h2 class="section-title">About Me</h2>
-        <div class="about-grid">
-            <div>
-                <p style="font-size: 1.1rem; margin-bottom: 1.5rem;">
-                    I am a detail-oriented technical operations specialist finishing my degree at Millersville University. My background combines rigorous analytical problem-solving with practical leadership strategies.
-                </p>
-                <p style="font-size: 1.1rem; margin-bottom: 1.5rem;">
-                    Through hands-on work in fast-paced industrial environments, I specialize in eliminating manufacturing waste, managing operational processes, and communicating status targets seamlessly to senior stakeholders. 
-                </p>
+    <!-- Case Studies Section -->
+    <section id="case-studies">
+        <h2 class="section-title">Featured Case Study</h2>
+        <div class="card">
+            <h3>AboveAir Assembly Bottleneck & Continuous Improvement Study</h3>
+            <p style="margin: 0.5rem 0 1rem 0; color: #475569;">Conducted formal time and motion studies, designed customized Kaizen workstations, and reduced assembly lead times across primary manufacturing lines.</p>
+            <a href="case-study.html" class="btn btn-primary">Read Full Case Study</a>
+        </div>
+    </section>
+
+    <!-- Real Reviews / Recommendations -->
+    <section id="reviews" style="background-color: #f1f5f9;">
+        <h2 class="section-title">Recommendations & Endorsements</h2>
+        <div class="card-grid">
+            <div class="card">
+                <p>"Connor brought direct structure to our workflow measurement, providing clear cycle metrics that directly helped our assembly managers streamline operations."</p>
+                <strong style="display: block; margin-top: 1rem; color: var(--primary-color);">- Engineering Management Team</strong>
+                <span style="font-size: 0.85rem; color: #64748b;">AboveAir Technologies</span>
             </div>
-            <div>
-                <div class="education-card">
-                    <h3>Education</h3>
-                    <p style="font-weight: 600; margin-top: 0.5rem;">Millersville University</p>
-                    <p style="font-size: 0.95rem; color: #475569;">B.S. Engineering & Technology Management</p>
-                    <p style="font-size: 0.95rem; color: #475569;">Concentration: General Technology</p>
-                    <p style="font-size: 0.85rem; font-weight: bold; margin-top: 0.5rem; color: var(--primary-color);">Senior Status</p>
-                </div>
+            <div class="card">
+                <p>"Exceptional leadership and tactical organization, driving high team performance and measurable community engagement metrics."</p>
+                <strong style="display: block; margin-top: 1rem; color: var(--primary-color);">- Collegiate Program Leadership</strong>
+                <span style="font-size: 0.85rem; color: #64748b;">Millersville Athletics</span>
             </div>
         </div>
     </section>
 
-    <!-- Professional Experience Section -->
-    <section id="experience" style="background-color: #f1f5f9;">
-        <h2 class="section-title">Professional Experience</h2>
-        <div class="timeline">
-            
-            <div class="timeline-item">
-                <div class="timeline-header">
-                    <div>
-                        <h3>Engineering Intern</h3>
-                        <strong style="color: #475569;">Above Air Technologies</strong>
-                    </div>
-                    <span class="timeline-date">May 2026 – Present</span>
-                </div>
-                <p>Support facility operations and standard assembly line tracking to improve throughput and identify workflow inefficiencies.</p>
-                <ul>
-                    <li>Conducted formal time studies on manufacturing lines to measure precise assembly, brazing, and wiring cycle metrics.</li>
-                    <li>Sourced specialized machinery and industrial physical space adaptations to cut lead time bottlenecks and improve shop safety.</li>
-                    <li>Drafted operational status reports and performance updates directly for the corporate engineering manager.</li>
-                </ul>
-                <a href="Connor N Internship Paper.pdf" target="_blank" class="btn btn-secondary" style="display: inline-block; margin-top: 1rem; font-size: 0.85rem; padding: 0.4rem 0.8rem;">📄 View Internship Technical Report (PDF)</a>
-                </a>
-            </div>
-            </div>
-
-            <div class="timeline-item">
-                <div class="timeline-header">
-                    <div>
-                        <h3>Social Media & Operations Coordinator</h3>
-                        <strong style="color: #475569;">Millersville Club Lacrosse (NCLL)</strong>
-                    </div>
-                    <span class="timeline-date">Fall 2024 – Present</span>
-                </div>
-                <p>Manage community outreach, logistics planning, and digital strategy for a collegiate club sports organization.</p>
-                <ul>
-                    <li>Spearheaded local partner outreach campaigns to secure essential program funding for uniforms and travel costs.</li>
-                    <li>Designed and executed digital content schedules, successfully increasing total social media platform audience engagement by 91.1%.</li>
-                </ul>
-            </div>
-
+    <!-- FAQs Section -->
+    <section id="faq">
+        <h2 class="section-title">Frequently Asked Questions</h2>
+        <div class="faq-item">
+            <h3>What are your primary technical competencies?</h3>
+            <p>Industrial time/motion studies, 5S methodologies, Kaizen continuous improvement, mechatronics assembly, and 3D print prototyping.</p>
+        </div>
+        <div class="faq-item">
+            <h3>When are you available for full-time post-graduation roles?</h3>
+            <p>Available for full-time positions following graduation from Millersville University in 2026.</p>
         </div>
     </section>
 
-    <!-- Core Skills Section -->
-    <section id="skills">
-        <h2 class="section-title">Core Competencies</h2>
-        <div class="skills-grid">
-            
-            <div class="skill-category">
-                <h3>Industrial Engineering</h3>
-                <div class="skill-tags">
-                    <span class="tag">Lean Manufacturing</span>
-                    <span class="tag">Kaizen Methodology</span>
-                    <span class="tag">Time Studies</span>
-                    <span class="tag">Motion Waste Reduction</span>
-                    <span class="tag">Facility Logistics</span>
-                </div>
-            </div>
-
-            <div class="skill-category">
-                <h3>Automation & Mechatronics</h3>
-                <div class="skill-tags">
-                    <span class="tag">3D Printing</span>
-                    <span class="tag">Post-Processing</span>
-                    <span class="tag">PLC Programming (RSLogix)</span>
-                    <span class="tag">Control Panels</span>
-                    <span class="tag">Servo Control</span>
-                    <span class="tag">Arduino Integration</span>
-                </div>
-            </div>
-
-            <div class="skill-category">
-                <h3>Leadership & Ops</h3>
-                <div class="skill-tags">
-                    <span class="tag">Project Management</span>
-                    <span class="tag">Stakeholder Reporting</span>
-                    <span class="tag">Outreach & Fundraising</span>
-                    <span class="tag">Cross-functional Teamwork</span>
-                </div>
-            </div>
-
+    <!-- Maps & Directions Section -->
+    <section id="location" style="background-color: #f1f5f9;">
+        <h2 class="section-title">Regional Location</h2>
+        <p style="margin-bottom: 1rem;">Based in the Lancaster/Millersville, PA region with flexibility for regional and national industrial operations placement.</p>
+        <div style="width: 100%; height: 300px; border-radius: 8px; overflow: hidden; border: 1px solid var(--border-color);">
+            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d48868.52834529323!2d-76.3811562!3d39.9989874!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x89c62372d82944b5%3A0xa646279f0412e698!2sMillersville%2C%20PA!5e0!2m3!1sen!2sus!4v1700000000000" width="100%" height="100%" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
         </div>
     </section>
 
-    <!-- Projects Portfolio Section -->
-    <section id="projects" style="background-color: #f1f5f9;">
-        <h2 class="section-title">Key Projects</h2>
-        <div class="projects-grid">
-            
-            <!-- Project 1 -->
-            <div class="project-card">
-                <img src="image_2.png" alt="Finished Stormtrooper Helmet Front" class="project-image">
-                <div class="project-content">
-                    <h3>Stormtrooper Helmet (ANH)</h3>
-                    <p>A screen-accurate 3D-printed replica focusing on high-quality post-processing and finishing. This build involved extensive sanding, priming, painting, and polishing to achieve a high-gloss, production-quality final aesthetic.</p>
-                </div>
-            </div>
-
-            <!-- Project 2 -->
-            <div class="project-card">
-                <img src="image_3.png" alt="Iron Man Helmet Mechatronics internal mechanics" class="project-image">
-                <div class="project-content">
-                    <h3>Iron Man Mark 5 Mechatronics</h3>
-                    <p>A complex electromechanical integration project involving the programming of multiple servo motors to articulate a segmented faceplate. This demonstrates skills in Arduino programming, circuitry, complex mechanical linkage design, and power management.</p>
-                </div>
-            </div>
-
-            <!-- Project 3 -->
-            <div class="project-card">
-                <img src="image_1.png" alt="Iron Man Helmet Assembly" class="project-image">
-                <div class="project-content">
-                    <h3>Full Assembly & LED Integration</h3>
-                    <p>The completed assembly of the mechanized system, featuring the closed faceplate, integrated LED eye effects, internal padding for comfort, and final exterior finishing. This project showcases detailed multi-material component integration.</p>
-                </div>
-            </div>
-
-        </div>
-    </section>
-
-    <!-- Contact Section -->
+    <!-- Contact Form with Redirect to Thank You Page -->
     <section id="contact">
-        <div class="contact-container">
-            <h2 class="section-title">Connect with Me</h2>
-            <p style="font-size: 1.1rem; color: #475569; margin-bottom: 1.5rem;">
-                I am currently open to exploring post-graduation opportunities in engineering leadership, operational technology, and production management. Let's discuss how my skills align with your organization's goals.
-            </p>
-            <div class="contact-links">
-                <a href="mailto:cpnew103@gmail.com">📧 cpnew103@gmail.com</a>
-                <a href="https://www.linkedin.com/in/connor-new42" target="_blank">🔗 LinkedIn Profile</a>
-                <a href="Connor New Resume 2026.pdf" target="_blank">📄 Download Resume (PDF)</a>
-            </div>
-        </div>
+        <h2 class="section-title">Get In Touch</h2>
+        <form class="contact-form" action="thank-you.html" method="GET">
+            <input type="text" name="name" placeholder="Your Name" required>
+            <input type="email" name="email" placeholder="Your Email Address" required>
+            <textarea name="message" rows="5" placeholder="Your Message or Opportunity Details" required></textarea>
+            <button type="submit" class="btn btn-primary">Send Message</button>
+        </form>
     </section>
 
-    <!-- Footer -->
+    <!-- Sticky Mobile CTA -->
+    <div class="sticky-mobile-cta">
+        <a href="#contact">📩 Contact Direct</a>
+        <a href="Connor N Internship Paper.pdf" target="_blank">📄 Tech Paper (PDF)</a>
+    </div>
+
+    <!-- Footer with Privacy Policy & Internal Links -->
     <footer>
-        <p>&copy; 2026 Connor New. Built for modern browser performance.</p>
+        <p>&copy; 2026 Connor New. All Rights Reserved. | <a href="privacy.html">Privacy Policy</a></p>
     </footer>
 
 </body>
